@@ -4,15 +4,12 @@ import path from "path";
 import dotenv from "dotenv";
 dotenv.config();
 
-// livereload imports
-import livereload from "livereload";
-import connect from "connect-livereload";
-
 // app setup
 const app = express();
 const port = process.env.PORT || 4000;
 
-// livereload setup
+// publicly available files
+app.use(express.static("public"));
 const liveReloadServer = livereload.createServer();
 liveReloadServer.server.once("connection", () => {
   setTimeout(() => {
@@ -21,13 +18,8 @@ liveReloadServer.server.once("connection", () => {
 });
 liveReloadServer.watch(path.resolve("public"));
 app.use(connect());
-
-
-// publicly available files
-app.use(express.static("public"));
-
 // routes
-app.get("/red", (req, res) => {
+app.get("/", (req, res) => {
   // res.send("Hello World!");
   const pathToHTML = path.resolve("src", "views", "index.html");
   res.sendFile(pathToHTML);
