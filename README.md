@@ -7,8 +7,12 @@ It will be possible in the future to mark tasks as done and to categorize them.
 
 ## Getting Started
 
+### .env file
+
 After cloning the repository, **you need to create an .env file** in the root of the project.  
 You could also just rename .env-default to .env and fill in the values.
+
+### Installation
 
 After that, you can run the following commands to install the application:
 
