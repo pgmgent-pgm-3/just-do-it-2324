@@ -1,10 +1,12 @@
 // import statements
 import express from "express";
 import path from "path";
+import dotenv from "dotenv";
+dotenv.config();
 
 // app setup
 const app = express();
-const port = 3456;
+const port = process.env.PORT || 4000;
 
 // publicly available files
 app.use(express.static("public"));
