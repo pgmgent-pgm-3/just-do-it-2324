@@ -22,12 +22,11 @@ liveReloadServer.server.once("connection", () => {
 liveReloadServer.watch(path.resolve("public"));
 app.use(connect());
 
-
 // publicly available files
 app.use(express.static("public"));
 
 // routes
-app.get("/red", (req, res) => {
+app.get("/", (req, res) => {
   // res.send("Hello World!");
   const pathToHTML = path.resolve("src", "views", "index.html");
   res.sendFile(pathToHTML);
