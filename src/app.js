@@ -23,6 +23,8 @@ liveReloadServer.watch(path.resolve("public"));
 app.use(connect());
 
 // publicly available files
+// browser can access these files via /file-name (e.g. http://localhost:4000/css/main.css)
+// when referencing files in html, use /file-name (e.g. /css/main.css)
 app.use(express.static("public"));
 
 // routes
