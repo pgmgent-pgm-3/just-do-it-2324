@@ -1,0 +1,17 @@
+{
+  "name": "just-do-it",
+  "version": "1.0.0",
+  "description": "Simple To Do application, with ExpressJS",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "keywords": [
+    "express",
+    "api",
+    "todo"
+  ],
+  "author": "Frederick Roegiers",
+  "license": "ISC"
+}
