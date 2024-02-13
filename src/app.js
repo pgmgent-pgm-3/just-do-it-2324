@@ -6,6 +6,9 @@ import path from "path";
 const app = express();
 const port = 3456;
 
+// publicly available files
+app.use(express.static("public"));
+
 // routes
 app.get("/", (req, res) => {
   // res.send("Hello World!");
